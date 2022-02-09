@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.section-heading {
+  @apply text-center text-lg text-white font-semibold mb-2;
+}
+
+/* ---------------------------------------------------------------------------- Form -------------------------------------------------------------------- */
+.form-item-container {
+  @apply flex flex-col;
+}
+
+.form-label {
+  @apply text-slate-200 font-bold;
+}
+
+.form-input {
+  @apply border border-slate-900 py-1 px-3 outline-none appearance-none;
+}
+
+.form-helptext {
+  @apply text-sky-300;
+}
+
+
+
+
+/* ---------------------------------------------------------------------------- Data -------------------------------------------------------------------- */
+.table-heading-entry {
+  @apply border-2 border-slate-400 py-4 text-center bg-slate-900 text-white font-bold;
+}
+
+.table-data-entry-1 {
+  @apply border-2 border-slate-400 py-2 font-bold text-slate-200 px-4;
+}
+
+.table-data-entry-2 {
+  @apply border-2 border-slate-400 py-1 text-white px-4;
+}
