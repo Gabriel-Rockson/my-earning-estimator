@@ -1,5 +1,7 @@
 FROM node:16.13.2
 
+RUN npm install -g npm@8.4.1
+
 # for caching optimisations
 COPY package*.json /
 RUN npm install
