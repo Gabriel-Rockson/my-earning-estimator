@@ -13,7 +13,7 @@
 }
 
 .form-label {
-  @apply text-slate-200 font-bold;
+  @apply text-slate-200 font-bold text-sm;
 }
 
 .form-input {
@@ -21,7 +21,7 @@
 }
 
 .form-helptext {
-  @apply text-sky-300;
+  @apply text-sky-400;
 }
 
 
@@ -33,9 +33,9 @@
 }
 
 .table-data-entry-1 {
-  @apply border-2 border-slate-400 py-2 font-bold text-slate-200 px-4;
+  @apply border-2 border-slate-600 py-2 font-bold text-slate-200 px-2;
 }
 
 .table-data-entry-2 {
-  @apply border-2 border-slate-400 py-1 text-white px-4;
+  @apply border-2 border-slate-600 py-1 text-white px-2 ;
 }

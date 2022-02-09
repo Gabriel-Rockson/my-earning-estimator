@@ -14,27 +14,27 @@ function EstimatorResults() {
           <tbody>
             <tr>
               <td className="table-data-entry-1">Average Yearly Earnings</td>
-              <td className="table-data-entry-2">$ 70,000</td>
+              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 70,00000</td>
             </tr>
 
             <tr>
               <td className="table-data-entry-1">Average Monthly Earnings</td>
-              <td className="table-data-entry-2">$ 5, 830</td>
+              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 5, 830</td>
             </tr>
             
             <tr>
               <td className="table-data-entry-1">Average Weekly Earnings</td>
-              <td className="table-data-entry-2">$ 1457.5</td>
+              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 1457.5</td>
             </tr>
 
             <tr>
               <td className="table-data-entry-1">Average Daily Earnings</td>
-              <td className="table-data-entry-2">$ 291</td>
+              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 291</td>
             </tr>
 
             <tr>
               <td className="table-data-entry-1">Hourly Rate</td>
-              <td className="table-data-entry-2">$ 58</td>
+              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 58</td>
             </tr>
 
             <tr>
