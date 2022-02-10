@@ -1,20 +1,20 @@
 function EstimatorResults() {
   return (
     <>
-      <div className="w-3/5">
+      <div className="w-full md:w-3/5 py-5 md:py-0">
         <h1 className="section-heading">Estimator Data</h1>
         <table className="table-auto border border-slate-800 w-full">
           <thead>
             <tr className="border-collapse border border-b border-slate-800">
               <th className="table-heading-entry">Parameter</th>
-              <th className="table-heading-entry">Value</th>
+              <th className="table-heading-entry w-36">Value</th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
               <td className="table-data-entry-1">Average Yearly Earnings</td>
-              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 70,00000</td>
+              <td className="table-data-entry-2"><span className='text-green-600 font-bold text-lg'>$</span> 700,000</td>
             </tr>
 
             <tr>

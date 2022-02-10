@@ -4,7 +4,7 @@
 
 
 .section-heading {
-  @apply text-center text-lg text-white font-semibold mb-2;
+  @apply text-center md:text-lg text-white font-semibold mb-2 text-xl;
 }
 
 /* ---------------------------------------------------------------------------- Form -------------------------------------------------------------------- */
@@ -37,5 +37,5 @@
 }
 
 .table-data-entry-2 {
-  @apply border-2 border-slate-600 py-1 text-white px-2 ;
+  @apply border-2 border-slate-600 py-1 text-white pl-2;
 }

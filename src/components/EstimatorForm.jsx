@@ -1,7 +1,7 @@
 function EstimatorForm() {
   return (
     <>
-      <div className="w-2/5 bg-slate-900 px-8 py-2 rounded-lg">
+      <div className="w-full md:w-2/5 bg-slate-900 px-8 py-5 md:py-2 rounded-lg">
         <h1 className="section-heading">Estimator Form</h1>
         <form action="#" className="flex flex-col space-y-1">
 
@@ -9,7 +9,7 @@ function EstimatorForm() {
             <label htmlFor="" className="form-label">Your Currency</label>
             <select name="" id="" className="form-input">
               <option value="Ghc">Ghc</option>
-              <option value="USD" selected>USD</option>
+              <option value="USD">USD</option>
               <option value="GBP">GBP</option>
             </select>
             <small className="form-helptext">Average amount you will earn per week</small>
