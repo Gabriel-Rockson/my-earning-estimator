@@ -1,34 +1,84 @@
+import cc from "currency-codes";
+import { useState } from "react";
+
 function EstimatorForm() {
+  const [currency, setCurrency] = useState(cc.code("USD").code);
+  const [yearlyEstimate, setYearlyEstimate] = useState(50000);
+  const [monthlyEarning, setMonthlyEarning] = useState("");
+
+  const handleCurrencyChange = (event) => {
+    setCurrency(event.target.value);
+  };
+
+  const handleYearlyEstimateChange = (event) => {
+    setYearlyEstimate(event.target.value);
+  };
+
+  const handleMonthlyEarning = (event) => {
+    setMonthlyEarning(event.target.value);
+  };
+
   return (
     <>
-      <div className="w-full md:w-2/5 bg-slate-900 px-8 py-5 md:py-2 rounded-lg">
+      <div className="w-full md:w-2/5 bg-slate-900 px-5 md:px-5 py-5 md:py-2 rounded-lg">
         <h1 className="section-heading">Estimator Form</h1>
         <form action="#" className="flex flex-col space-y-1">
-
           <div className="form-item-container">
-            <label htmlFor="" className="form-label">Your Currency</label>
-            <select name="" id="" className="form-input">
-              <option value="Ghc">Ghc</option>
-              <option value="USD">USD</option>
-              <option value="GBP">GBP</option>
-            </select>
-            <small className="form-helptext">Average amount you will earn per week</small>
+            <label htmlFor="" className="form-label">
+              Your Currency Code
+            </label>
+            <input
+              value={currency}
+              onChange={handleCurrencyChange}
+              list="codes"
+              type="text"
+              className="form-input"
+              placeholder="Enter your country's currency code"
+            />
+            <datalist name="" id="codes">
+              {cc.codes().map((code) => {
+                return <option key={code} value={code} />;
+              })}
+            </datalist>
+            <small className="form-helptext">
+              Average amount you will earn per week
+            </small>
           </div>
 
           <div className="form-item-container">
-            <label htmlFor="per-year" className="form-label">Yearly Estimate</label>
-            <input type="text" className="form-input" />
-            <small className="form-helptext">how much do you need in a year?</small>
+            <label htmlFor="per-year" className="form-label">
+              Yearly Estimate
+            </label>
+            <input
+              value={yearlyEstimate}
+              onChange={handleYearlyEstimateChange}
+              type="text"
+              className="form-input"
+            />
+            <small className="form-helptext">
+              how much do you need in a year?
+            </small>
           </div>
 
           <div className="form-item-container">
-            <label htmlFor="" className="form-label">Monthly Earning</label>
-            <input type="text" className="form-input" />
-            <small className="form-helptext">Amount you will earn in a month</small>
+            <label htmlFor="" className="form-label">
+              Monthly Earning
+            </label>
+            <input
+              value={monthlyEarning}
+              onChange={handleMonthlyEarning}
+              type="text"
+              className="form-input"
+            />
+            <small className="form-helptext">
+              Amount you will earn in a month
+            </small>
           </div>
 
           <div className="form-item-container">
-            <label htmlFor="" className="form-label">Weekly Earning</label>
+            <label htmlFor="" className="form-label">
+              Weekly Earning
+            </label>
             <select name="" id="" className="form-input">
               <option value="1">1</option>
               <option value="2">2</option>
@@ -43,24 +93,34 @@ function EstimatorForm() {
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <small className="form-helptext">Average amount you will earn per week</small>
+            <small className="form-helptext">
+              Average amount you will earn per week
+            </small>
           </div>
 
           <div className="form-item-container">
-            <label htmlFor="" className="form-label">Total work hours per day</label>
+            <label htmlFor="" className="form-label">
+              Total work hours per day
+            </label>
             <input type="text" className="form-input" />
-            <small className="form-helptext">hours you are willing to work each day.</small>
+            <small className="form-helptext">
+              hours you are willing to work each day.
+            </small>
           </div>
 
           <div className="form-item-container">
-            <label htmlFor="" className="form-label">Hourly Earning</label>
+            <label htmlFor="" className="form-label">
+              Hourly Earning
+            </label>
             <input type="text" className="form-input" />
-            <small className="form-helptext">This should be your hourly rate</small>
+            <small className="form-helptext">
+              This should be your hourly rate
+            </small>
           </div>
         </form>
       </div>
     </>
-  )
+  );
 }
 
-export default EstimatorForm
+export default EstimatorForm;

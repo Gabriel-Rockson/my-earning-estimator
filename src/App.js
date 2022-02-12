@@ -7,8 +7,6 @@ import EstimatorResults from './components/EstimatorData';
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-  console.log(windowWidth)
-
   useEffect(() => {
     // Set event listener
     const handleWindowResize = () => {
@@ -16,8 +14,6 @@ function App() {
     }
   
     window.addEventListener('resize', handleWindowResize)
-
-    console.log(windowWidth)
 
     return () => {
       // Remove the event listener
@@ -31,7 +27,7 @@ function App() {
       <div className='w-full bg-neutral-900 min-h-screen flex justify-around py-5 md:py-0'>
 
         <div className='lg:w-11/12 xl:w-3/4 2xl:w-3/5 self-center md:px-5'>
-          <h1 className="text-white text-2xl font-bold text-center py-5">
+          <h1 className="text-white text-2xl sm:text-2xl font-bold text-center py-5 px-2">
             Potential <span className='text-green-400'>Earning<span className='text-green-600'>$</span></span> Estimator For <span className='text-yellow-400'>Freelancers</span>
           </h1>
           <div className='md:bg-slate-800 self-center md:p-5 lg:p-10 px-5'>

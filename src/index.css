@@ -17,7 +17,7 @@
 }
 
 .form-input {
-  @apply border border-slate-900 py-1 px-3 outline-none appearance-none;
+  @apply border border-slate-900 py-1 px-3 outline-none appearance-none placeholder:text-xs text-slate-700;
 }
 
 .form-helptext {
