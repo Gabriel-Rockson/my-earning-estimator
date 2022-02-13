@@ -30,8 +30,8 @@ function App() {
           <h1 className="text-white text-2xl sm:text-2xl font-bold text-center py-5 px-2">
             Potential <span className='text-green-400'>Earning<span className='text-green-600'>$</span></span> Estimator For <span className='text-yellow-400'>Freelancers</span>
           </h1>
-          <div className='md:bg-slate-800 self-center md:p-5 lg:p-10 px-5'>
-            <div className='flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-2 lg:space-x-10'>
+          <div className='md:bg-slate-800 self-center md:p-5 lg:p-10'>
+            <div className='flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-2 lg:space-x-10 px-3'>
               <EstimatorForm />
               <EstimatorResults />
              {/* { windowWidth > 768 && <EstimatorResults />} */}
