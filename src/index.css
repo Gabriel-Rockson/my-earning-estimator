@@ -17,7 +17,11 @@
 }
 
 .form-input {
-  @apply border border-slate-900 py-1 px-3 outline-none appearance-none placeholder:text-xs text-slate-700;
+  @apply disabled:bg-slate-400 py-1 px-3 pl-12 outline-none appearance-none placeholder:text-xs text-black w-full;
+}
+
+.form-input-1 {
+  @apply disabled:bg-slate-400 py-1 px-3 outline-none appearance-none placeholder:text-xs text-black w-full;
 }
 
 .form-helptext {

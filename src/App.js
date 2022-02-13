@@ -5,15 +5,41 @@ import EstimatorResults from "./components/EstimatorData";
 
 function App() {
   const initialValues = {
-    currency: "",
-    yearlyEstimate: "",
-    monthlyEarnings: "",
-    weeklyEarnings: "",
-    hourlyRate: "",
-    hoursPerDay: "",
+    currency: "USD",
+    yearlyEstimate: 0.0,
+    monthlyEarnings: 0.0,
+    weeklyEarnings: 0.0,
+    dailyEarnings: 0.0,
+    hourlyRate: 20,
+    hoursPerDay: 6,
+    hoursPerWeek: 0,
+    hoursPerMonth: 0,
+    hoursPerYear: 0,
   };
 
   const [values, setValues] = useState(initialValues);
+
+  useEffect(() => {
+    const dailyEarnings = (values.hourlyRate * values.hoursPerDay).toFixed(2);
+    const weeklyEarnings = (dailyEarnings * 7).toFixed(2);
+    const monthlyEarnings = (weeklyEarnings * 4).toFixed(2);
+    const yearlyEstimate = (monthlyEarnings * 12).toFixed(2);
+
+    const hoursPerWeek = values.hoursPerDay * 7;
+    const hoursPerMonth = hoursPerWeek * 4;
+    const hoursPerYear = hoursPerMonth * 12;
+
+    setValues({
+      ...values,
+      dailyEarnings,
+      weeklyEarnings,
+      monthlyEarnings,
+      yearlyEstimate,
+      hoursPerWeek,
+      hoursPerMonth,
+      hoursPerYear,
+    });
+  }, [values.hourlyRate, values.hoursPerDay]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -40,7 +66,18 @@ function App() {
                 handleInputChange={handleInputChange}
                 values={values}
               />
-              <EstimatorResults />
+              <EstimatorResults
+                currency={values.currency}
+                yearlyEstimate={values.yearlyEstimate}
+                monthlyEarnings={values.monthlyEarnings}
+                weeklyEarnings={values.weeklyEarnings}
+                dailyEarnings={values.dailyEarnings}
+                hoursPerDay={values.hoursPerDay}
+                hoursPerWeek={values.hoursPerWeek}
+                hoursPerMonth={values.hoursPerMonth}
+                hoursPerYear={values.hoursPerYear}
+                hourlyRate={values.hourlyRate}
+              />
             </div>
           </div>
         </div>
