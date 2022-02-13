@@ -1,29 +1,10 @@
 import cc from "currency-codes";
 import { useState } from "react";
 
-function EstimatorForm() {
-  const initialValues = {
-    currency: "",
-    yearlyEstimate: "",
-    monthlyEarnings: "",
-    weeklyEarnings: "",
-    hourlyRate: "",
-    hoursPerDay: "",
-  };
-
-  const [values, setValues] = useState(initialValues);
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  };
-
+function EstimatorForm({ handleInputChange, values }) {
   return (
     <>
-      <div className="w-full md:w-2/5 bg-slate-900 px-3 md:px-5 py-5 md:py-2 rounded-lg">
+      <div className="w-full md:w-2/5 bg-slate-900 px-3 md:px-5 py-5 md:py-2">
         <h1 className="section-heading">Estimator Form</h1>
         <form action="#" className="flex flex-col space-y-1">
           <div className="form-item-container">
@@ -63,7 +44,7 @@ function EstimatorForm() {
               className="form-input"
             />
             <small className="form-helptext">
-             average amount earned per year
+              average amount earned per year
             </small>
           </div>
 
@@ -130,9 +111,7 @@ function EstimatorForm() {
               <option value="15">15</option>
               <option value="16">16</option>
             </select>
-            <small className="form-helptext">
-              hours worked per day.
-            </small>
+            <small className="form-helptext">hours worked per day.</small>
           </div>
 
           <div className="form-item-container">
@@ -147,9 +126,7 @@ function EstimatorForm() {
               type="text"
               className="form-input"
             />
-            <small className="form-helptext">
-              amount earned per hour.
-            </small>
+            <small className="form-helptext">amount earned per hour.</small>
           </div>
         </form>
       </div>
